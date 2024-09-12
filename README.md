@@ -1,7 +1,7 @@
 # Python Socket Programming with Docker
 
 This project demonstrates how to use Python's socket programming capabilities to create a server-client architecture, where the server can handle multiple clients. The server and clients are each run in their own Docker containers.
-The server is a simple calculator that can perform addition operations of two positive numbers. 
+The server is a simple calculator that can perform addition operations of two positive numbers up to 100. 
 The clients can connect to the server and send requests to perform these operations.
 
 ## Project Structure
