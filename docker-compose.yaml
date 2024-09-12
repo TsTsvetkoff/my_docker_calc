@@ -1,0 +1,39 @@
+version: "3"
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.server
+    networks:
+      - mynetwork
+    stdin_open: true
+    tty: true
+
+  client1:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client
+    networks:
+      - mynetwork
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+
+  client2:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client
+    networks:
+      - mynetwork
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+
+networks:
+  mynetwork:
+
+
+
+
